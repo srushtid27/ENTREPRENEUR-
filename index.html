@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrepreneur Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Entrepreneur Fact</h1>
+        <p id="fact"></p>
+        <button id="generateFact">Get Random Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Entrepreneurs are often characterized by their willingness to take risks. They invest time, money, and resources into their ideas, knowing that there is a chance of failure.",
+            "Many entrepreneurs are innovators who create new products or services that disrupt existing markets or create entirely new ones.",
+            "Entrepreneurs often identify problems in the market and develop solutions to address those issues, which can lead to successful business ventures.",
+            "Successful entrepreneurs are typically self-motivated and driven by their passion for their business and the desire to achieve their goals.",
+            "Building a strong network is crucial for entrepreneurs. They often rely on connections for advice, partnerships, and funding opportunities.",
+            "The ability to adapt to changing market conditions and consumer preferences is essential for entrepreneurs to stay relevant and competitive.",
+            "Entrepreneurs must have a good understanding of financial management, including budgeting, forecasting, and managing cash flow.",
+            "Starting and running a business often requires long hours and hard work, especially in the early stages when resources are limited.",
+            "Many successful entrepreneurs have experienced failure before achieving success. They view failures as learning opportunities rather than setbacks.",
+            "Entrepreneurs come from various backgrounds and industries, and their experiences can greatly influence their approach to business and innovation."
+        ];
+
+        document.getElementById('generateFact').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
